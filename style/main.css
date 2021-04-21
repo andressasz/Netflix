@@ -1,0 +1,114 @@
+
+:root{
+    --vermelho: #E50914;
+    --preta: #141414;  /*se você sabe as cores principais do site utilize isso como váriável, ao invés de trocar a cor em vários lugares*/
+}
+
+*{ /*reset= pega todos os elementos*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*limite de tudo será a borda da caixa!*/
+}
+
+
+/*elementos base*/
+body{
+background: var(--preta);
+font-family: 'Arial';
+color: white;
+}
+
+
+
+header .container{
+    display: flex; /*alinha os elementos em tela*/
+    flex-direction: row; /*joga tudo pra cima*(vertical)*/
+    align-items: center;
+    justify-content: space-between; /*espaço entre elementos*/
+}
+
+header .logo{
+    margin: 5px; /*desgruda das paredes rsrs*/
+    color: var(--vermelho);
+    font-family: 'CircularStd';
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin: 10px; /*distanciamento, não esquecer*/
+}
+
+
+header nav a:hover{ /*efeitos legaaais*/
+    color:#fff;
+}
+
+/* filme principal */
+.filme-principal{
+    font-size: 16px;
+    background-image: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url("/img/parasita.jpg");
+    height: 400px;
+    background-size: cover; /* especifica o tamanho da imagem. cobertura? */
+    display: flex;/*joga os elementos pro padrão LINHA pra mudar p coluna é flex-direction*/
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /*os elementos começam da esquerda*/
+}
+
+.filme-principal .descricao {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10px;
+    margin: 40px; /*distanciamenteo*/
+}
+
+.titulo {
+    font-size: 40px;
+    margin-top: 15%;
+    font-family: 'Trebuchet MS';
+    
+}
+
+.filme-principal .botao {
+    background-color: rgba(0,0,0,.50); /*vermelho/verde/azul/alpha 50% = transparencia*/
+    border: none;
+    color: white;
+
+    padding: 15px 30px; /*espaço interno do elemento. Caso use só 1 valor, ele dará espaço em todos os lados (esq. dir. cim. bai.)*/
+    margin-right: 15px;
+    font-size: 12px;
+
+    cursor: pointer;
+    transition: .5 ease all;
+}
+
+.botao:hover{
+    background-color: white;
+    color: black;
+
+}
+
+.botao i{
+    margin-right: 8px;
+}
+
+.container {
+    margin-left: 20px;
+}
+
+.filme-principal .container {
+    width: 70%;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block; 
+
+}
+
+
+.carrossel-filmes{
+    margin-top: 5px;
+}
